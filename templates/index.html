@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+<!--     <link rel="stylesheet" type="text/css" href="Font-Awesome-4.7/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/templatemo-style.css">
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <title>Image colorization Demo</title>
+</head>
+
+<body>
+    
+    <div class="container">
+    <form method = 'POST' enctype='multipart/form-data' action = '/'>
+        <section class="col-md-12 content" id="home">
+           <div class="col-lg-6 col-md-6 content-item tm-black-translucent-bg tm-logo-box">
+              <i class="fa fa-snowflake-o fa-4x tm-logo"></i>
+              <h1 class="text-uppercase">Image Colorization Demo</h1>
+               
+           </div>
+           <div class="col-lg-6 col-md-6 content-item content-item-1 background tm-white-translucent-bg">
+		    <input type='file' name = 'file' onchange="readURL(this);" />
+			<br>
+			
+    <img id="blah" />
+	<br><br>
+	<!-- <button id = "subButton"><b>Colorize It</b></button> -->
+  <input type = 'submit' id = 'subButton' value = 'Colorize It' />
+  </form>
+	<br>
+	</div>
+       </section>
+
+  <script>
+	   function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(400)
+                    .height(200);
+            };
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+  </script>
+       
+
+ 
+
+  
+<div class="text-center footer">
+	<div class="container">
+        
+    </div>
+</div>
+
+<script>
+
+// Write current year in copyright text.
+  document.getElementsByClassName("tm-current-year").value = new Date().getFullYear();
+
+</script>
+</body>
+</html>
